@@ -1,0 +1,96 @@
+{
+  "authors": [
+    { "name": "John Doe", "role": "Frontend Engineer" },
+    { "name": "James Thomas", "role": "Staff Engineer" },
+    { "name": "Phillip Anthropy", "role": "Product Designer" },
+    { "name": "Albert Ross", "role": "Engineering Manager" },
+    { "name": "Hannah Johny", "role": "Full-Stack Developer" },
+    { "name": "Miles Tone", "role": "DevOps Engineer" },
+    { "name": "Quiche Hollandaise", "role": "UX Researcher" },
+    { "name": "Hilary Ouse", "role": "Backend Engineer" },
+    { "name": "Thomas Book", "role": "Tech Lead" },
+    { "name": "Joe Blow", "role": "Junior Developer" }
+  ],
+  "topics": [
+    {
+      "titles": [
+        "Why I stopped overusing useEffect",
+        "Lessons from migrating a class-based codebase to hooks",
+        "Custom hooks that actually earned their keep",
+        "Debugging a stale closure in production"
+      ],
+      "sentences": [
+        "Most of the effects I wrote last year were really just derived state in disguise.",
+        "Moving that logic into an event handler removed three re-renders and a whole category of bugs.",
+        "A good custom hook should hide the messy parts and expose a tiny, boring interface.",
+        "Refs are the escape hatch for values that must stay fresh without triggering a render.",
+        "Our team now reviews every new effect with one question: what is this synchronizing with?",
+        "The React docs section on \"You might not need an effect\" is worth a re-read every few months."
+      ]
+    },
+    {
+      "titles": [
+        "What a year of remote design reviews taught us",
+        "Small UI details that make an app feel fast",
+        "Designing empty states people actually appreciate",
+        "Accessibility is a product feature, not a checklist"
+      ],
+      "sentences": [
+        "Skeleton screens made our load times feel noticeably shorter, even though the numbers barely changed.",
+        "We started recording short walkthrough videos instead of scheduling another hour-long meeting.",
+        "Focus rings are not ugly. Invisible focus is what is ugly.",
+        "An empty state is a chance to explain what the screen is for and what to do next.",
+        "Testing with a keyboard only for ten minutes caught more issues than our last automated audit.",
+        "Consistent spacing does more for perceived quality than any amount of gradients."
+      ]
+    },
+    {
+      "titles": [
+        "How we cut our CI pipeline from 18 minutes to 6",
+        "A practical guide to zero-downtime deployments",
+        "Our incident review process, and what we changed",
+        "Caching strategies that did not backfire"
+      ],
+      "sentences": [
+        "Parallelizing the test suite across four runners was the biggest single win.",
+        "Caching node_modules by lockfile hash saved nearly two minutes on every build.",
+        "We write incident reviews as timelines first and opinions second.",
+        "Blue-green deploys sound complicated, but most of the work is making your health checks honest.",
+        "The scariest outages we had were all caused by a config change, never by new code.",
+        "Adding a simple deploy dashboard gave the whole team confidence to ship on Fridays."
+      ]
+    },
+    {
+      "titles": [
+        "Designing REST endpoints your future self will thank you for",
+        "Pagination: offset, cursor, or keyset?",
+        "Lessons from rate limiting a public API",
+        "Why we moved from polling to server-sent events"
+      ],
+      "sentences": [
+        "Cursor-based pagination keeps results stable even when new rows are inserted mid-scroll.",
+        "Offset pagination is fine until your table grows and page 500 takes four seconds to load.",
+        "Returning a clear error code and a retry-after header made our support tickets drop sharply.",
+        "Idempotency keys saved us from double-charging customers after a flaky network retry.",
+        "Versioning in the URL is boring, and boring is exactly what an API should be.",
+        "Server-sent events gave us live updates with a fraction of the complexity of websockets."
+      ]
+    },
+    {
+      "titles": [
+        "How to give code review feedback people want to hear",
+        "What I wish I knew in my first year as a developer",
+        "Running a healthy on-call rotation",
+        "Writing documentation that gets read"
+      ],
+      "sentences": [
+        "Phrasing a comment as a question usually starts a better conversation than issuing a verdict.",
+        "Nobody remembers the clever one-liner, but everyone remembers the bug it caused.",
+        "We cap on-call shifts at one week and always pair a newcomer with someone experienced.",
+        "A short README with a working quick start beats a hundred pages of outdated wiki.",
+        "Asking for help after thirty focused minutes is a skill, not a weakness.",
+        "Celebrating a deleted file is a perfectly good way to end a sprint."
+      ]
+    }
+  ]
+}
