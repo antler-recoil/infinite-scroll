@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { fetchPosts } from '../api/mockPosts'
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
 export default function Feed() {
   const [posts, setPosts] = useState([])
@@ -31,6 +32,8 @@ export default function Feed() {
     setLoading(false)
   }
 
+  const sentinelRef = useIntersectionObserver(loadMore, { rootMargin: '200px' })
+
   return (
     <div className="space-y-4">
       {posts.map((post) => (
@@ -50,13 +53,9 @@ export default function Feed() {
         </article>
       ))}
 
-      <button
-        onClick={loadMore}
-        disabled={loading}
-        className="w-full rounded-lg bg-blue-600 px-4 py-3 font-medium text-white hover:bg-blue-700 disabled:opacity-50"
-      >
-        {loading ? 'Loading...' : 'Load More Posts'}
-      </button>
+      <div ref={sentinelRef} className="h-4" aria-hidden="true" />
+
+      {loading && <p className="py-4 text-center text-gray-500">Loading...</p>}
     </div>
   )
 }
